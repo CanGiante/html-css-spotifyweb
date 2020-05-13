@@ -15,6 +15,13 @@ html {
   min-height: 170px;
 
 }
+
+
+li {
+
+  list-style: none;
+
+}
 /* END GENERAL RULES */
 
 
@@ -37,6 +44,40 @@ main {
   float: left;
 
   overflow: hidden;
+
+}
+
+
+
+.sidebar li {
+
+  font-size: 0.8em;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: grey;
+
+}
+
+
+.sidebar .nav.menu li {
+
+  padding-left: 15px;
+
+}
+
+
+.sidebar .nav.menu li:first-child {
+
+  border-left: 4px solid lightgreen;
+  padding-left: 11px;
+  color: white;
+
+}
+
+
+.sidebar .nav:not(.menu) {
+
+  padding-left: 15px;
 
 }
 
@@ -76,23 +117,26 @@ main {
 /* END MAIN */
 
 .nav.logo {
-  background: brown;
+  /* background: brown; */
   height: 70px;
+  line-height: 95px;        /* NOTE: perche non 70px???? */
+  width: 150px;
 }
 
 .nav.menu {
-  background: coral;
+  /* background: coral; */
   height: 110px;
+  padding-top: 5px;
 }
 
 .nav.playlists {
-  background: cyan;
+  /* background: cyan; */
   height: calc(100% - 250px);
   overflow-y: auto;
 }
 
 .nav.banner {
-  background: goldenrod;
+  /* background: goldenrod; */
   height: 70px;
 }
 
