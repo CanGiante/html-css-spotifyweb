@@ -12,6 +12,7 @@ html {
   background-color: green;
   width: 100%;
   height: 100vh;
+  min-height: 170px;
 
 }
 /* END GENERAL RULES */
@@ -50,6 +51,27 @@ main {
 
   overflow-y: auto;
 
+  position: relative;
+
+}
+
+
+.content {
+
+  padding-top: 70px;
+
+}
+
+
+.header {
+
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 70px;
+  min-height: 70px;
+
+  position: fixed;
+
 }
 /* END MAIN */
 
@@ -81,6 +103,8 @@ footer {
   background-color: pink;
   width: 100%;
   height: 100px;
+  min-height: 100px;
+
 
 }
 /* END FOOTER */
