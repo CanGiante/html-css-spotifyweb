@@ -35,6 +35,8 @@ main {
 
   float: left;
 
+  overflow: hidden;
+
 }
 
 
@@ -46,8 +48,31 @@ main {
 
   float: left;
 
+  overflow-y: auto;
+
 }
 /* END MAIN */
+
+.nav.logo {
+  background: brown;
+  height: 70px;
+}
+
+.nav.menu {
+  background: coral;
+  height: 110px;
+}
+
+.nav.playlists {
+  background: cyan;
+  height: calc(100% - 250px);
+  overflow-y: auto;
+}
+
+.nav.banner {
+  background: goldenrod;
+  height: 70px;
+}
 
 
 /* START FOOTER */
