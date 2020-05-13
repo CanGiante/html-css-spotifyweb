@@ -38,11 +38,11 @@ main {
 }
 
 
-.content-area {
+.box-content {
 
   background-color: yellow;
   width: calc(100% - 300px);
-  height: 100px;
+  height: 100%;
 
   float: left;
 
