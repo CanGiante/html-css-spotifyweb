@@ -22,6 +22,20 @@ li {
   list-style: none;
 
 }
+
+
+h2, h4, h6 {
+
+  color: white;
+
+}
+
+
+p {
+
+  color: grey;
+
+}
 /* END GENERAL RULES */
 
 
@@ -37,8 +51,8 @@ main {
 
 .sidebar {
 
-  background-color: blue;
-  width: 300px;
+  background-color: black;
+  width: 225px;
   height: 100%;
 
   float: left;
@@ -85,7 +99,7 @@ main {
 .box-content {
 
   background-color: yellow;
-  width: calc(100% - 300px);
+  width: calc(100% - 225px);
   height: 100%;
 
   float: left;
@@ -123,11 +137,13 @@ main {
   width: 150px;
 }
 
+
 .nav.menu {
   /* background: coral; */
   height: 110px;
   padding-top: 5px;
 }
+
 
 .nav.playlists {
   /* background: cyan; */
@@ -135,9 +151,23 @@ main {
   overflow-y: auto;
 }
 
+
 .nav.banner {
   /* background: goldenrod; */
   height: 70px;
+
+  margin-right: 15px;
+
+}
+
+
+.nav.banner p {
+
+  border-bottom: 1px solid grey;
+
+
+    margin-bottom: 7.5px;
+    padding-bottom: 7.5px;
 }
 
 
@@ -148,7 +178,6 @@ footer {
   width: 100%;
   height: 100px;
   min-height: 100px;
-
 
 }
 /* END FOOTER */
