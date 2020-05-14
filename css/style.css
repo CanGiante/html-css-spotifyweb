@@ -13,7 +13,9 @@ html {
   background-color: green;
   width: 100%;
   height: 100vh;
-  min-height: 170px;
+
+  /* min-width: 350px; */
+  /* min-height: 350px; */
 
 }
 
@@ -116,8 +118,6 @@ main {
 .sidebar .nav.menu img {
 
   height: 13px;                  /* NOTE: INGRANDIRE !!! */
-  /* position: relative;
-  top: 2.5px; */
 
 }
 
@@ -147,38 +147,43 @@ main {
   padding-bottom: 8px
 
 }
+
+
+/** start small-sidebar **/
+.small-sidebar {
+
+  background-color: black;
+  width: 50px;
+  height: 100%;
+
+  float: left;
+
+}
+/** end small-sidebar **/
 /* end sidebar */
 
 
 /* start content area */
+/** start box content **/
 .box-content {
 
   background-color: #141922;
   width: calc(100% - 225px);
   height: 100%;
-
   float: left;
-
   overflow-y: auto;
-
   position: relative;
 
 }
+/** end box content **/
 
 
-.content {
-
-  padding-top: 70px;
-
-}
-
-
+/** start header **/
 .header {
 
   background-color: rgba(0, 0, 0, 0.4);
   width: inherit;
   height: 70px;
-
   position: fixed;
 
 }
@@ -186,25 +191,29 @@ main {
 
 .header button {
 
-  float: right;
-
-  position: relative;
-
-  transform: translate(-5%, -50%);
-
-  top: 50%;
-
   background: initial;
   padding: 10px 40px;
   border-radius: 20px;
-
   color: white;
   font-weight: bold;
   font-size: 0.8em;
+  float: right;
+  position: relative;
+  transform: translate(-5%, -50%);
+  top: 50%;
+
+}
+/** end header **/
+
+
+/** start content **/
+.content {
+
+  padding: 70px 20px 20px 20px;
 
 }
 
-
+/*** start contents list ***/
 .contents-list {
 
   text-align: center;
@@ -230,15 +239,31 @@ main {
   position: absolute;
   background-color: lightgreen;
   content:"";
-
-  bottom: -4px;
-  left: 50%;
   height: 2px;
   width: 40%;
-
   transform: translateX(-50%);
+  bottom: -4px;
+  left: 50%;
 
 }
+/*** end contents list ***/
+
+
+/*** start section 1: "Recently played" ***/
+.recently-played {
+  padding-top: 30px;
+}
+
+
+.img-cover {
+  width: 90%;
+}
+
+
+/*** end section 1: "Recently played" ***/
+
+
+/** end content **/
 /* end content area */
 /* END MAIN */
 
@@ -252,3 +277,18 @@ footer {
 
 }
 /* END FOOTER */
+
+
+
+
+
+
+
+
+@media all and (max-width: 768px) {
+
+  .box-content {
+    width: calc(100% - 50px);
+  }
+
+}
