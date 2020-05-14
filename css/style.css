@@ -3,6 +3,7 @@ html {
 
   font-size: 15px;
   font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
 
 }
 
@@ -193,10 +194,12 @@ main {
   top: 50%;
 
   background: initial;
-  padding: 5px 40px;
-  border-radius: 15px;
+  padding: 10px 40px;
+  border-radius: 20px;
 
   color: white;
+  font-weight: bold;
+  font-size: 0.8em;
 }
 /* END MAIN */
 
