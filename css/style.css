@@ -150,7 +150,7 @@ main {
 /* end sidebar */
 
 
-
+/* start content area */
 .box-content {
 
   background-color: yellow;
@@ -185,6 +185,7 @@ main {
 
 
 .header button {
+
   float: right;
 
   position: relative;
@@ -200,7 +201,44 @@ main {
   color: white;
   font-weight: bold;
   font-size: 0.8em;
+
 }
+
+
+.sections-list {
+
+  text-align: center;
+  padding-top: 10px;
+
+}
+
+
+.sections-list li {
+
+  display: inline;
+  color: grey;
+  font-size: 0.9em;
+  margin-right: 15px;
+  position: relative;
+
+}
+
+
+.sections-list li:first-child:after {
+
+  position: absolute;
+  background-color: lightgreen;
+  content:"";
+
+  bottom: -5px;
+  left: 50%;
+  height: 4px;
+  width: 40%;
+
+  transform: translateX(-50%);
+
+}
+/* end content area */
 /* END MAIN */
 
 
