@@ -149,17 +149,7 @@ main {
 }
 
 
-/** start small-sidebar **/
-.small-sidebar {
 
-  background-color: black;
-  width: 50px;
-  height: 100%;
-
-  float: left;
-
-}
-/** end small-sidebar **/
 /* end sidebar */
 
 
@@ -254,11 +244,22 @@ main {
   padding-top: 30px;
 }
 
+.recently-played p {
+  font-size: 0.8em;
+}
+
+.cover {
+  margin-top: 30px;
+}
 
 .img-cover {
   width: 90%;
+  display: block;
 }
 
+.caption {
+  max-width: 90%;
+}
 
 /*** end section 1: "Recently played" ***/
 
@@ -289,6 +290,51 @@ footer {
 
   .box-content {
     width: calc(100% - 50px);
+  }
+
+  .img-cover {
+    width: 90%;
+  }
+
+  /* start small-sidebar */
+  .small-sidebar {
+
+    background-color: black;
+    width: 50px;
+    height: 100%;
+    float: left;
+    padding: 7.5px 12.5px 12.5px 12.5px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+
+  .small-sidebar img:not(:last-child) {
+
+    margin-bottom: 12.5px;
+
+  }
+
+
+  .small-sidebar img:nth-child(5n) {
+
+    margin-top: auto;
+  	margin-bottom: 15px;
+  	margin-left: 2px;
+
+  }
+  /* end small-sidebar */
+
+}
+
+
+@media all and (min-width: 992px) and (max-width: 1200px) {
+
+  .recently-played .container .col-lg-2:nth-child(5n) .cover {
+
+    margin-bottom: 50px;
+    
   }
 
 }
