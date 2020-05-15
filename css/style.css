@@ -332,6 +332,20 @@ section p {
   max-width: 90%;
 
 }
+
+
+.popular-artist .img-cover {
+
+  border-radius: 50%;
+
+}
+
+
+.popular-artist h5 {
+
+  text-align: center;
+  
+}
 /*** end sections ***/
 
 
@@ -352,7 +366,7 @@ footer {
 
 
 /* START MEDIAQUERY */
-@media all and (max-width: 768px) {
+@media all and (max-width: 768px)  {
 
 
   /* start small-sidebar */
@@ -406,10 +420,11 @@ footer {
 
  }
 
+
 }
 
 
-@media all and (min-width: 768px) and (max-width: 992px) {
+@media all and (min-width: 768px) and (max-width: 992px)  {
 
 
   .recently-played .container .col-sm-6:nth-child(1n+6) .img-cover {
@@ -422,7 +437,7 @@ footer {
 }
 
 
-@media all and (min-width: 992px) and (max-width: 1200px) {
+@media all and (min-width: 992px) and (max-width: 1200px)  {
 
 
   .recently-played .container .col-lg-2:nth-child(5n) .thumbnail {
