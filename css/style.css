@@ -147,9 +147,6 @@ main {
   padding-bottom: 8px
 
 }
-
-
-
 /* end sidebar */
 
 
@@ -203,11 +200,12 @@ main {
 
 }
 
+
 /*** start contents list ***/
 .contents-list {
 
   text-align: center;
-  padding-top: 10px;
+  padding-top: 15px;
   text-transform: uppercase;
 
 }
@@ -215,10 +213,11 @@ main {
 
 .contents-list li {
 
-  display: inline;
+  display: inline-block;
   color: grey;
   font-size: 0.9em;
   margin-right: 15px;
+  margin-bottom: 30px;
   position: relative;
 
 }
@@ -239,28 +238,92 @@ main {
 /*** end contents list ***/
 
 
-/*** start section 1: "Recently played" ***/
-.recently-played {
-  padding-top: 30px;
-}
-
-.recently-played p {
-  font-size: 0.8em;
-}
-
+/*** start hover rulez ***/
 .cover {
-  margin-top: 30px;
+
+  position: relative;
+
 }
+
 
 .img-cover {
+
+  opacity: 1;
+  transition: 0.3s ease;
+
+}
+
+
+.cover:hover .img-cover {
+
+  opacity: 0.3;
+
+}
+
+
+.play-button {
+
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-45%, -50%);
+  opacity: 0;
+  transition: 0.3s ease;
+
+}
+
+
+.play-button .far.fa-play-circle {
+
+  color: white;
+  font-size: 555%;
+
+}
+
+
+.cover:hover .play-button {
+
+  opacity: 1;
+
+}
+/*** end hover rulez ***/
+
+
+/*** start section 1: "Recently played" ***/
+.recently-played {
+
+  padding-top: 10px;
+
+}
+
+
+.recently-played p {
+
+  font-size: 0.8em;
+
+}
+
+
+.thumbnail {
+
+  margin-top: 20px;
+
+}
+
+
+.img-cover {
+
   width: 90%;
   display: block;
+
 }
+
 
 .caption {
-  max-width: 90%;
-}
 
+  max-width: 90%;
+
+}
 /*** end section 1: "Recently played" ***/
 
 
@@ -283,18 +346,22 @@ footer {
 
 
 
-
-
-
 @media all and (max-width: 768px) {
 
+
   .box-content {
+
     width: calc(100% - 50px);
+
   }
 
+
   .img-cover {
+
     width: 90%;
+
   }
+
 
   /* start small-sidebar */
   .small-sidebar {
@@ -326,15 +393,18 @@ footer {
   }
   /* end small-sidebar */
 
+
 }
 
 
 @media all and (min-width: 992px) and (max-width: 1200px) {
 
+
   .recently-played .container .col-lg-2:nth-child(5n) .cover {
 
     margin-bottom: 50px;
-    
+
   }
+
 
 }
