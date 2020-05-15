@@ -290,14 +290,14 @@ main {
 
 
 /*** start sections ***/
-.recently-played {
+section:first-of-type {
 
   padding-top: 10px;
 
 }
 
 
-section:not(.recently-played) {
+section:not(:first-of-type) {
 
   padding-top: 40px;
 
