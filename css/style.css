@@ -289,7 +289,7 @@ main {
 /*** end hover rulez ***/
 
 
-/*** start section 1: "Recently played" ***/
+/*** start sections ***/
 .recently-played {
 
   padding-top: 10px;
@@ -315,6 +315,7 @@ main {
 
   width: 90%;
   display: block;
+  padding-bottom: 10px;
 
 }
 
@@ -324,7 +325,7 @@ main {
   max-width: 90%;
 
 }
-/*** end section 1: "Recently played" ***/
+/*** end sections ***/
 
 
 /** end content **/
@@ -343,24 +344,8 @@ footer {
 /* END FOOTER */
 
 
-
-
-
+/* START MEDIAQUERY */
 @media all and (max-width: 768px) {
-
-
-  .box-content {
-
-    width: calc(100% - 50px);
-
-  }
-
-
-  .img-cover {
-
-    width: 90%;
-
-  }
 
 
   /* start small-sidebar */
@@ -394,13 +379,46 @@ footer {
   /* end small-sidebar */
 
 
+  .box-content {
+
+    width: calc(100% - 50px);
+
+  }
+
+
+  .img-cover {
+
+    width: 90%;
+
+  }
+
+
+ .recently-played .container .col-xs-6:nth-child(1n+6) .img-cover {
+
+    padding-top: 25px;
+
+ }
+
+}
+
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+
+
+  .recently-played .container .col-sm-6:nth-child(1n+6) .img-cover {
+
+    padding-top: 25px;
+
+  }
+
+
 }
 
 
 @media all and (min-width: 992px) and (max-width: 1200px) {
 
 
-  .recently-played .container .col-lg-2:nth-child(5n) .cover {
+  .recently-played .container .col-lg-2:nth-child(5n) .thumbnail {
 
     margin-bottom: 50px;
 
