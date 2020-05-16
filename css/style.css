@@ -2,7 +2,7 @@
 html {
 
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 
 }
@@ -132,7 +132,7 @@ main {
 
 .sidebar .nav.playlists {
 
-  height: calc(100% - 260px);
+  height: calc(100% - 260px);       /* NOTE: perche non -240px?? */
   min-height: 70px;
   overflow-y: auto;
 
@@ -257,6 +257,22 @@ main {
 
 
 /** start content **/
+.container {
+
+  margin-left: 0;
+
+}
+
+
+[class*="col-"] {
+
+  padding-right: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+
 .content {
 
   padding: 70px 20px 20px 20px;
@@ -264,7 +280,15 @@ main {
 }
 
 
-/*** start contents list ***/
+.content h5 {
+
+  margin-top: 10px;
+
+}
+/** end content **/
+
+
+/** start contents list **/
 .contents-list {
 
   text-align: center;
@@ -298,10 +322,31 @@ main {
   left: 50%;
 
 }
-/*** end contents list ***/
+/** end contents list **/
 
 
-/*** start hover rulez ***/
+/** start sections **/
+section:first-of-type {
+
+  padding-top: 10px;
+
+}
+
+
+section:not(:first-of-type) {
+
+  padding-top: 45px;
+
+}
+
+
+section p {
+
+  font-size: 0.8em;
+
+}
+
+
 .cover {
 
   position: relative;
@@ -311,6 +356,8 @@ main {
 
 .img-cover {
 
+  width: 100%;
+  display: block;
   opacity: 1;
   transition: 0.3s ease;
 
@@ -333,13 +380,16 @@ main {
   opacity: 0;
   transition: 0.3s ease;
 
+  /* width: 100%;
+  height: 100%; */
+
 }
 
 
 .play-button .far.fa-play-circle {
 
   color: white;
-  font-size: 555%;
+  font-size: 500%;              /* NOTE: perche non si adatta?? */
 
 }
 
@@ -347,73 +397,6 @@ main {
 .cover:hover .play-button {
 
   opacity: 1;
-
-}
-/*** end hover rulez ***/
-
-
-/*** start sections ***/
-.container {
-
-  margin-left: 0;
-
-}
-
-
-section:first-of-type {
-
-  padding-top: 10px;
-
-}
-
-
-section:not(:first-of-type) {
-
-  padding-top: 45px;
-
-}
-
-
-section p {
-
-  font-size: 0.8em;
-
-}
-
-
-[class*="col-"] {
-
-  padding-right: 20px;
-  margin-bottom: 20px;
-
-}
-
-
-.thumbnail {
-
-  margin-top: 20px;
-
-}
-
-
-.cover {
-
-  padding-bottom: 10px;
-
-}
-
-
-.img-cover {
-
-  width: 100%;
-  display: block;
-
-}
-
-
-.caption {
-
-  max-width: 90%;
 
 }
 
@@ -430,10 +413,7 @@ section p {
   text-align: center;
 
 }
-/*** end sections ***/
-
-
-/** end content **/
+/** end sections **/
 /* end content area */
 /* END MAIN */
 
@@ -442,8 +422,24 @@ section p {
 footer {
 
   background-color: #282828;
+  color: white;
   width: 100%;
   height: 70px;
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+
+
+
+
+.playbar {
+
+
 
 }
 /* END FOOTER */
@@ -501,9 +497,27 @@ footer {
   }
 
 
+  /* NOTE: da qui in poi inizia
+  il compromesso a cui sono
+  sceso per ovviare al problema
+  dell' eccessiva lunghezza
+  del caption di "Stranger Things";
+  in realtà nella web app vera
+  è impostato un limite massimo
+  di caratteri utilizzabili per
+  questo tipo di didascalia*/
+
+
  .recently-played .container .col-xs-6:nth-child(1n+6) .img-cover {
 
     padding-top: 25px;
+
+ }
+
+
+ .recently-played .container .col-sm-6:nth-child(1n+6) .play-button {
+
+   top: 56%;
 
  }
 
@@ -521,13 +535,20 @@ footer {
   }
 
 
+  .recently-played .container .col-sm-6:nth-child(1n+6) .play-button {
+
+    top: 55%;
+
+  }
+
+
 }
 
 
 @media all and (min-width: 992px) and (max-width: 1200px)  {
 
 
-  .recently-played .container .col-lg-2:nth-child(5n) .thumbnail {
+  .recently-played .container .col-lg-2:nth-child(5n) .thumbnail {    /* NOTE: perche 5n e non 4n? */
 
     margin-bottom: 55px;
 
