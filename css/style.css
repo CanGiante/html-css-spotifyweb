@@ -428,8 +428,7 @@ footer {
   width: 100%;
   height: 70px;
 
-  padding-top: 5px;
-
+  padding-top: 5px;                  /* NOTE: perche mi serve questo padding?? */
 
   display: flex;
   justify-content: space-between;
@@ -437,6 +436,7 @@ footer {
 
 
 }
+
 
 footer h6 {
 
@@ -451,10 +451,10 @@ footer p {
 
 }
 
+
 .current-track {
 
   height: 40px;
-
 
 }
 
@@ -463,7 +463,6 @@ footer p {
 
   height: 100%;
   float: left;
-
 
 }
 
@@ -476,7 +475,6 @@ footer p {
   margin-right: 15px;
   float: left;
 
-
 }
 
 
@@ -485,7 +483,6 @@ footer p {
   height: 100%;
   line-height: 40px;
   float: left;
-
 
 }
 
@@ -503,15 +500,14 @@ footer p {
 
   /* width: 80%; */
 
+  position: relative;
+
 }
 
 
 .controller .buttons {
 
   font-size: 20px;
-
-  position: relative;
-
   padding-bottom: 30px;
 
 }
@@ -519,7 +515,7 @@ footer p {
 
 .controller .buttons i {
 
-  margin: 0 5px 0 5px;
+  margin: 0px 5px 0px 5px;
 
 }
 
@@ -527,20 +523,23 @@ footer p {
 .controller .buttons .fa-play-circle {
 
   font-size: 30px;
-  margin: 0 20px 0 20px;
+  margin: 0px 20px 0px 20px;
   vertical-align: sub;
 
 }
 
-.controller::after {
+
+.controller .buttons::after {
+  
 	position: absolute;
 	background-color: white;
 	content: "";
 	height: 3px;
-	width: 30%;
-	transform: translateX(-30%);
+	width: 180%;
+	transform: translateX(-50%);
 	bottom: 15px;
 	left: 50%;
+
 }
 /* END FOOTER */
 
