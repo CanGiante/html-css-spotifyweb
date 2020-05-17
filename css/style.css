@@ -53,7 +53,7 @@ main {
 main li:hover {
 
   color: white;
-  
+
 }
 
 
@@ -171,6 +171,7 @@ main li:hover {
 	margin: 7.5px 5px 7.5px 0px;
   background-color: grey;
   color: black;
+  font-size: 15px;
 
 }
 
@@ -192,6 +193,7 @@ main li:hover {
 
 
 /** inizio footerino **/
+
 .sidebar .nav.footer {
 
   height: 70px;
@@ -216,6 +218,8 @@ main li:hover {
   float: left;
   width: 17px;
   margin-right: 12px;
+  margin-left: 2.5px;
+  margin-bottom: -1px;
 
 }
 
@@ -225,7 +229,8 @@ main li:hover {
   float: left;
   width: 23px;
   height: 23px;
-  margin-right: 12px;
+  margin-right: 12.5px;
+  margin-left: 5px;
   background-color: grey;
   border-radius: 50%;
 
@@ -295,7 +300,7 @@ main li:hover {
 .container {
 
   margin-left: 0;
-  /* margin-right: -10px; */
+  margin-right: -10px;
 
 }
 
@@ -596,10 +601,10 @@ i:hover {
   .small-sidebar {
 
     background-color: black;
-    width: 50px;
+    width: 55px;
     height: 100%;
     float: left;
-    padding: 7.5px 12.5px 12.5px 12.5px;
+    padding: 7.5px 15px 12.5px 15px;
     display: flex;
     flex-direction: column;
 
@@ -618,6 +623,7 @@ i:hover {
     width: 17px;
     margin-top: auto;
     margin-left: 2px;
+    margin-bottom: 10px;
 
   }
 
@@ -635,9 +641,17 @@ i:hover {
 
   .box-content {
 
-    width: calc(100% - 50px);
+    width: calc(100% - 55px);
 
   }
+
+
+  .current-track .saves {
+
+  	line-height: 20px;
+  	width: 0;
+
+}
 
 
   /* NOTE: da qui in poi inizia
