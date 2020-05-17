@@ -4,6 +4,7 @@ html {
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
+
 }
 
 
@@ -38,7 +39,6 @@ p {
 /* END GENERAL RULES */
 
 
-
 /* START MAIN */
 main {
 
@@ -51,11 +51,14 @@ main {
 
 
 main li:hover {
+
   color: white;
+  
 }
 
 
 /* start sidebar */
+/** inizio generali **/
 .sidebar {
 
   background-color: black;
@@ -87,15 +90,7 @@ main li:hover {
   color: grey;
 
 }
-
-
-.sidebar .nav.menu {
-
-  height: 100px;
-	margin-bottom: 20px;
-	margin-top: 2.5px;
-
-}
+/** fine generali **/
 
 
 .sidebar .nav.logo {
@@ -103,6 +98,16 @@ main li:hover {
   height: 70px;
   line-height: 95px;           /* NOTE: perche non 70px?? */
   width: 150px;
+
+}
+
+
+/** inizio menu **/
+.sidebar .nav.menu {
+
+  height: 100px;
+	margin-bottom: 20px;
+	margin-top: 2.5px;
 
 }
 
@@ -116,18 +121,18 @@ main li:hover {
 }
 
 
-.sidebar .nav.menu li:hover {
-
-  color: white;
-
-}
-
-
 .sidebar .nav.menu li:first-child {
 
   border-left: 4px solid lightgreen;
   padding-left: 41px;
   color: white;
+
+}
+
+
+.sidebar .nav.menu img.selected {
+
+  left: 11px;
 
 }
 
@@ -140,15 +145,10 @@ main li:hover {
   left: 15px;
 
 }
+/** fine menu **/
 
 
-.sidebar .nav.menu img.selected {
-
-  left: 11px;
-
-}
-
-
+/** inizio playlist **/
 .sidebar .nav.playlists {
 
   height: calc(100% - 260px);       /* NOTE: perche non -240px?? */
@@ -167,10 +167,17 @@ main li:hover {
 
 .sidebar .nav.playlists p i {
 
-	color: black;
-	background-color: grey;
 	padding: 7.5px;
 	margin: 7.5px 5px 7.5px 0px;
+  background-color: grey;
+  color: black;
+
+}
+
+
+.sidebar .nav.playlists p:hover i {
+
+  background-color: white;
 
 }
 
@@ -181,8 +188,10 @@ main li:hover {
   margin-bottom: 15px;
 
 }
+/** fine  playlist **/
 
 
+/** inizio footerino **/
 .sidebar .nav.footer {
 
   height: 70px;
@@ -228,6 +237,7 @@ main li:hover {
   padding-top: 5px;
 
 }
+/** fine footerino **/
 /* end sidebar */
 
 
@@ -273,16 +283,12 @@ main li:hover {
 }
 
 
-
 .banner .button:hover {
 
   font-size: 0.8em;        /* NOTE: non scala correttamente!  */
 
 }
 /** end banner **/
-
-
-
 
 
 /** start content **/
@@ -462,7 +468,6 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 
 }
 
