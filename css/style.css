@@ -467,9 +467,7 @@ footer {
   color: white;
   width: 100%;
   height: 80px;
-
-  padding-top: 5px;                  /* NOTE: perche mi serve questo padding?? */
-
+  padding: 7.5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -545,7 +543,6 @@ i:hover {
 
 .controller {
 
-
   width: 33%;
 
   text-align: center;
@@ -556,24 +553,24 @@ i:hover {
 
 .controller .buttons {
 
-  font-size: 15px;
   padding-bottom: 30px;
+  padding-top: 10px;
 
 }
 
 
 .controller .buttons i {
 
-  margin: 0px 5px 0px 5px;
+  margin: 0px 1% 0px 1%;
 
 }
 
 
 .controller .buttons .fa-play-circle {
 
-  font-size: 25px;
-  margin: 0px 20px 0px 20px;
-  vertical-align: sub;
+  font-size: 30px;
+  margin: 0px 5% 0px 5%;
+  vertical-align: middle;
 
 }
 
@@ -581,13 +578,50 @@ i:hover {
 .controller .buttons::after {
 
 	position: absolute;
-	background-color: white;
+	background-color: grey;
 	content: "";
 	height: 3px;
 	width: 80%;
 	transform: translateX(-50%);
-	bottom: 15px;
+	bottom: 15%;
 	left: 50%;
+
+}
+
+
+.volume {
+
+  width: 15%;
+  position: relative;
+
+}
+
+.volume::after {
+
+	position: absolute;
+	background-color: grey;
+	content: "";
+	height: 3px;
+	width: 73%;
+	transform: translateX(-50%);
+	bottom: 30%;
+	left: 62%;
+
+}
+
+
+.playbar.volume .options {
+
+  margin-left: -20%;
+
+}
+
+
+.playbar.volume .options > i {
+
+  font-size: 0.7em;
+  margin-right: 10px;
+
 
 }
 /* END FOOTER */
@@ -651,7 +685,14 @@ i:hover {
   	line-height: 20px;
   	width: 0;
 
-}
+  }
+
+
+  .current-track .saves i {
+
+    padding-left: 2%;
+
+  }
 
 
   /* NOTE: da qui in poi inizia
