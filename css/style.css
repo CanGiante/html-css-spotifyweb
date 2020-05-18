@@ -36,7 +36,7 @@ p {
   color: grey;
 
 }
-/* END GENERAL RULES */
+/* END GENERAL RULES */                   /* NOTE: impostare dimensioni minime */
 
 
 /* START MAIN */
@@ -137,10 +137,10 @@ main li:hover {
 }
 
 
-.sidebar .nav.menu img {
+.sidebar .nav.menu img {                /* NOTE: colore svg? */
 
 	height: 25px;
-	position: absolute;
+	position: absolute;                  /* NOTE: e senza position? */
 	bottom: 3px;
   left: 15px;
 
@@ -290,17 +290,18 @@ main li:hover {
 
 .banner .button:hover {
 
-  font-size: 0.8em;        /* NOTE: non scala correttamente!  */
+  font-size: 0.8em;        /* NOTE: cosi non scala!  */
 
 }
 /** end banner **/
 
 
-/** start content **/
+/** start content **/       /* NOTE: come faccio a fare una lista di liste con 12-bool? */
 .container {
 
   margin-left: 0;
   margin-right: -10px;
+  max-width: none;
 
 }
 
@@ -413,7 +414,7 @@ section p {
 }
 
 
-.cover:hover .img-cover {
+.thumbnail:hover .img-cover {
 
   opacity: 0.3;
 
@@ -443,7 +444,7 @@ section p {
 }
 
 
-.cover:hover .play-button {
+.thumbnail:hover .play-button {
 
   opacity: 1;
 
@@ -515,7 +516,6 @@ i:hover {
 
 .current-track .current-caption {
 
-  height: 100%;
   padding-left: 10px;
   padding-top: 5px;
   margin-right: 15px;
@@ -526,7 +526,6 @@ i:hover {
 
 .current-track .saves {
 
-  height: 100%;
   line-height: 40px;
   color: grey;
   float: left;
@@ -541,29 +540,29 @@ i:hover {
 }
 
 
-.controller {
+/* .controller {
 
   width: 33%;
 
   text-align: center;
   position: relative;
 
-}
+} */
 
 
-.controller .buttons {
+/* .controller .buttons {
 
   padding-bottom: 30px;
   padding-top: 10px;
 
-}
+} */
 
 
-.controller .buttons i {
+/* .controller .buttons i {
 
   margin: 0px 1% 0px 1%;
 
-}
+} */
 
 
 .controller .buttons .fa-play-circle {
@@ -575,7 +574,7 @@ i:hover {
 }
 
 
-.controller .buttons::after {
+/* .controller .buttons::after {
 
 	position: absolute;
 	background-color: grey;
@@ -586,17 +585,18 @@ i:hover {
 	bottom: 15%;
 	left: 50%;
 
-}
+} */
 
 
-.volume {
+/* .volume {
 
   width: 15%;
   position: relative;
 
-}
+} */
 
-.volume::after {
+
+/* .volume::after {
 
 	position: absolute;
 	background-color: grey;
@@ -607,21 +607,20 @@ i:hover {
 	bottom: 30%;
 	left: 62%;
 
-}
+} */
 
 
-.playbar.volume .options {
+/* .playbar.volume .options {
 
-  margin-left: -20%;
+  margin-left: -25px;
 
-}
+} */
 
 
 .playbar.volume .options > i {
 
   font-size: 0.7em;
-  margin-right: 10px;
-
+  margin-right: 3%;
 
 }
 /* END FOOTER */
