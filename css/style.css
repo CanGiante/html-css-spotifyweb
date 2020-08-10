@@ -744,7 +744,7 @@ i:hover {
 
 
   .controller {
-    margin-left: calc(15px + 16px);
+    margin-left: calc(15px + 16px + 10px);
 
   }
 
