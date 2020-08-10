@@ -534,24 +534,17 @@ i:hover {
 }
 
 
-/* .current-track .saves {
+.saves i {
 
-  line-height: 40px;
+  margin: 0px 5px;
   color: grey;
-  float: right;
 
-} */
+}
 
 
-/* .saves i:first-child {
+.saves i:hover {
 
-  margin: 0 10px;
-
-} */
-
-.saves i:nth-child(1n + 1) {
-
-  margin: 0 5px;
+  color: white;
 
 }
 
@@ -590,7 +583,7 @@ i:hover {
 }
 
 
-.controller .buttons .fa-play-circle:hover {
+.controller .buttons i:nth-child(1n+1):hover {
 
   transform: scale(1.2);
 
@@ -614,7 +607,7 @@ i:hover {
   display: flex;
   justify-content: center;
   margin: auto;
-  width: 80%;
+  width: 60%;
 }
 
 .timeline .progress-bar  {
@@ -622,7 +615,7 @@ i:hover {
   height: 3px;
   width: 100%;
   background-color: grey;
-  margin: auto;
+  margin: auto 15px;
 
 }
 
@@ -631,7 +624,7 @@ i:hover {
 
   margin: 7.5px;
   font-size: 0.75em;
-  color: grey;
+  color: white;
 
 }
 
@@ -796,6 +789,13 @@ i:hover {
   .recently-played .container .col-sm-6:nth-child(1n+6) .play-button {
 
     top: 55%;
+
+  }
+
+
+  .controller .timeline {
+
+    width: 100%;
 
   }
 
