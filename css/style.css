@@ -41,29 +41,6 @@ p {
 /* END GENERAL RULES */
 
 
-/* NOTE: LE COSE CHE RIMANGONO DA FARE
-
--progressbars e relativi hover
-
--playbutton adattivo
-
--usa classe .selected
-
--tutti i link
-
--''effettua upgrade'' senza position + hover con scale
-
--impostare dimensioni minime
-
--note varie
-
--ellipsis
-
--rifare .content con flexbox
-
- */
-
-
 /* START MAIN */
 main {
 
@@ -283,7 +260,7 @@ main li:hover {
 }
 
 
-.banner .button {           /* NOTE: da rifare senza position! (vedi nota seguente) */
+.banner .button {
 
   padding: 10px 40px;
   border: 2px solid white;
@@ -300,7 +277,7 @@ main li:hover {
 
 .banner .button:hover {
 
-  font-size: 0.8em;        /* NOTE: cosi non scala, con scale scala troppo! */
+  font-size: 0.8em;
 
 }
 /** end banner **/
@@ -433,6 +410,8 @@ section p {
 
 .play-button {
 
+  color: white;
+  font-size: 3rem;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -440,18 +419,8 @@ section p {
   opacity: 0;
   transition: 0.1s ease;
 
-  /* width: 100%;
-  height: 100%; */
-
 }
 
-
-.play-button .far.fa-play-circle {
-
-  color: white;
-  font-size: 500%;              /* NOTE: perche non si adatta?? */
-
-}
 
 
 .thumbnail:hover .play-button {
@@ -561,7 +530,7 @@ i:hover {
 
 .controller .buttons {
 
-  margin-bottom: 5px;
+  margin: 5px 0px;
 
 }
 
@@ -590,25 +559,15 @@ i:hover {
 }
 
 
-/* .controller .buttons::after {
-
-	position: absolute;
-	background-color: grey;
-	content: "";
-	height: 3px;
-	width: 80%;
-	transform: translateX(-50%);
-	bottom: 15%;
-	left: 50%;
-
-} */
-
 .controller .timeline {
+
   display: flex;
   justify-content: center;
   margin: auto;
   width: 60%;
+
 }
+
 
 .timeline .progress-bar  {
 
@@ -616,7 +575,37 @@ i:hover {
   width: 100%;
   background-color: grey;
   margin: auto 15px;
+  display: flex;
+  justify-content: flex-start;
 
+}
+
+
+.controller .progress-bar .now {
+
+	background-color: white;
+	height: 3px;
+	width: 20%;
+  position: relative;
+
+}
+
+.controller:hover .progress-bar .now  {
+
+  background-color: lightgreen;
+
+}
+
+.controller:hover .progress-bar .now::after {
+  position: absolute;
+  background-color: white;
+  content: "";
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  top: 50%;
+  right: -5px;
 }
 
 
@@ -657,15 +646,31 @@ i:hover {
 }
 
 
-.volume::after {
+.volume .progress-bar .now {
 
-	/* position: absolute;
 	background-color: white;
-	content: "";
 	height: 3px;
-	width: 35px;
-	right: 90px; */
+	width: 20%;
+  position: relative;
 
+}
+
+.volume:hover .progress-bar .now  {
+
+  background-color: lightgreen;
+
+}
+
+.volume:hover .progress-bar .now::after {
+  position: absolute;
+  background-color: white;
+  content: "";
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  top: 50%;
+  right: -5px;
 }
 /* END FOOTER */
 
@@ -723,8 +728,31 @@ i:hover {
   }
 
 
+  .recently-played .container .col-xs-6:nth-child(1n+6) .img-cover {
+
+    padding-top: 25px; /* * */
+
+  }
+
+
+  .recently-played .container .col-sm-6:nth-child(1n+6) .play-button {
+
+    top: calc(50% + 25px);
+
+  }
+
+
+  .play-button {
+
+    font-size: 7rem;
+
+  }
+
+
   .controller .timeline {
+
     width: 100%;
+
   }
 
 
@@ -737,40 +765,17 @@ i:hover {
 
 
   .controller {
+
     margin-left: calc(15px + 16px + 10px);
 
   }
+
 
   .current-track .saves i {
 
     padding-left: 2%;
 
   }
-
-
-  /* NOTE: da qui in poi inizia
-  il compromesso a cui sono
-  sceso per ovviare al problema
-  dell' eccessiva lunghezza
-  del caption di "Stranger Things";
-  in realtà nella web app vera
-  è impostato un limite massimo
-  di caratteri utilizzabili per
-  questo tipo di didascalia*/
-
-
- .recently-played .container .col-xs-6:nth-child(1n+6) .img-cover {
-
-    padding-top: 25px;
-
- }
-
-
- .recently-played .container .col-sm-6:nth-child(1n+6) .play-button {
-
-   top: 56%;
-
- }
 
 
 }
@@ -781,14 +786,21 @@ i:hover {
 
   .recently-played .container .col-sm-6:nth-child(1n+6) .img-cover {
 
-    padding-top: 25px;
+    padding-top: 25px; /* * */
 
   }
 
 
   .recently-played .container .col-sm-6:nth-child(1n+6) .play-button {
 
-    top: 55%;
+    top: calc(50% + 25px);
+
+  }
+
+
+  .play-button {
+
+    font-size: 6rem;
 
   }
 
@@ -806,11 +818,23 @@ i:hover {
 @media all and (min-width: 992px) and (max-width: 1200px)  {
 
 
-  .recently-played .container .col-lg-2:nth-child(5n) .thumbnail {    /* NOTE: perche 5n e non 4n? */
+  .recently-played .container .col-lg-2:nth-child(5n) .thumbnail {
 
-    margin-bottom: 55px;
+    margin-bottom: 55px; /* * */
 
   }
 
 
 }
+
+
+
+
+/*
+      * = fa parte del compromesso
+      a cui sono sceso per ovviare al problema
+      dell' eccessiva lunghezza della caption di "Stranger Things";
+      problema che probabilmente non avrei avuto se avessi usato flexbox.
+      NOTE: OVVIAMENTE IL MODO PIU SEMPLICE PER RISOLVERLO PREVEDE
+      L'USO DI UNA SEMPLICE ELLIPSIS.
+*/
